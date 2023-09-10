@@ -1,5 +1,10 @@
 # Platformer
 
+## Group members:
+Andrew Zhao <br>
+Yifan Huang <br>
+Yinuo Chen
+
 ## 1. Introduction
 A level-based game where players must navigate obstacles to guide the character to the finish line within certain time.
 
