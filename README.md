@@ -14,7 +14,7 @@ A level-based game where players must navigate obstacles (jump over obstacles, a
 - Obstacle - The game world is filled with various obstacles and challenges, such as platforms, pits, spikes, lava.These obstacles pose threats to the character and require the player to navigate and overcome them.
 - Goal - Pass the level within the allotted time
 
-### 1.2 Resource links
+### 1.2 Resource Links
 - Pixel Platformer (https://www.kenney.nl/assets/pixel-platformer)
 - Pixel Platformer Industrial Expansion (https://www.kenney.nl/assets/pixel-platformer-industrial-expansion)
 
@@ -23,4 +23,4 @@ A level-based game where players must navigate obstacles (jump over obstacles, a
 ### 2.1 Operation
 - Use the A key to move the character left
 - Use the D key to move the character right
-- Press the space bar to make the character jump. Press the spacebar twice to double jump
+- Press the spacebar to make the character jump. Press the spacebar twice to double jump
