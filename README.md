@@ -21,6 +21,9 @@ A level-based game where players must navigate obstacles (jump over obstacles, a
 ## 2. Gameplay Description
 
 ### 2.1 Operation
-- Use the A key to move the character left
-- Use the D key to move the character right
-- Press the spacebar to make the character jump. Press the spacebar twice to double jump
+- Use the A key to move the character left.
+- Use the D key to move the character right.
+- Press the spacebar to make the character jump. Press the spacebar twice to double jump.
+
+### 2.2 Objects in the game
+- ![Bat](Assets/Textures/kenney_pixel-platformer/Characters/character_0025.png): The character cannot touch the monster. Otherwise the game will restart. <br>
