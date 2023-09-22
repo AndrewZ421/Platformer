@@ -24,6 +24,9 @@ A level-based game where players must navigate obstacles (jump over obstacles, a
 - Use the A key to move the character left.
 - Use the D key to move the character right.
 - Press the spacebar to make the character jump. Press the spacebar twice to double jump.
+- Clicking the left mouse button to fire when you have bullets.
 
 ### 2.2 Objects in the game
-- ![Bat](Assets/Textures/kenney_pixel-platformer/Characters/character_0025.png): The character cannot touch the monster. Otherwise the game will restart. <br>
+- ![Bat](Assets/Textures/kenney_pixel-platformer/Characters/character_0025.png): This is a monster. The character cannot touch the monster. Otherwise the game will restart. <br>
+- ![Bullet](Assets/Textures/kenney_pixel-platformer/Tiles/tile_0159.png) : This is an ammunition box. The character will get five bullets by touching this box.
+- ![Bullet](Assets/Textures/kenney_pixel-platformer/Tiles/tile_0090.png) : This is a bullet. The character can fire bullets forward by clicking the left mouse button.
