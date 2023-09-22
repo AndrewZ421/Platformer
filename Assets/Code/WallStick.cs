@@ -5,12 +5,12 @@ using UnityEngine;
 public class WallStick : MonoBehaviour
 {
     public float wallJumpForce = 5f;
-    public float wallSlideSpeed = 0.5f; // 墙面滑行速度
-    public LayerMask wallLayer; // 设置为"wall" Layer
+    public float wallSlideSpeed = 0.5f;
+    public LayerMask wallLayer;
 
     private Rigidbody2D rb;
     private bool isTouchingWall;
-    private Vector2 wallNormal; // 墙面的法线
+    private Vector2 wallNormal;
 
     void Start()
     {
@@ -21,9 +21,9 @@ public class WallStick : MonoBehaviour
     {
         if (isTouchingWall)
         {
-            rb.velocity = new Vector2(rb.velocity.x, 0); // 设置垂直速度为滑行速度
+            rb.velocity = new Vector2(rb.velocity.x, 0);
 
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 WallJump();
             }
@@ -32,10 +32,10 @@ public class WallStick : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (((1 << collision.gameObject.layer) & wallLayer) != 0) // 检查碰撞的物体是否在"wall" Layer
+        if (((1 << collision.gameObject.layer) & wallLayer) != 0)
         {
             isTouchingWall = true;
-            wallNormal = collision.contacts[0].normal; // 获取碰撞的法线
+            wallNormal = collision.contacts[0].normal;
         }
     }
 
@@ -49,7 +49,7 @@ public class WallStick : MonoBehaviour
 
     void WallJump()
     {
-        Vector2 jumpDirection = (-wallNormal + Vector2.up).normalized; // 跳跃方向为墙面法线的反方向加上向上的方向，然后归一化
+        Vector2 jumpDirection = (-wallNormal + Vector2.up).normalized;
         rb.AddForce(jumpDirection * wallJumpForce, ForceMode2D.Impulse);
     }
 }
