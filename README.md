@@ -23,6 +23,7 @@ A level-based game where players must navigate obstacles (jump over obstacles, a
 ### 2.1 Operation
 - Use the A key to move the character left.
 - Use the D key to move the character right.
+- Press Q to make the character get bigger or smaller.
 - Press the spacebar to make the character jump. Press the spacebar twice to double jump.
 - Clicking the left mouse button to fire when you have bullets.
 
