@@ -15,6 +15,7 @@ public class WallStick : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        isTouchingWall = false;
     }
 
     void Update()

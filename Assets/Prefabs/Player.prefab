@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46fb13b3bd7b2d84e8f2599c65dedb49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpsLeft: 0
+  jumpsLeft: 2
   currentAmmo: 0
   bulletPrefab: {fileID: 6577440417934427355, guid: 0e8c968d308ae794fa273b853d724805, type: 3}
 --- !u!114 &4109754966023631702
