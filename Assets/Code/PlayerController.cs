@@ -12,6 +12,9 @@ namespace Platformer
         // State Tracking
         public int jumpsLeft;
 
+        public int currentAmmo = 0;
+        public GameObject bulletPrefab;
+
         // Character Scale
         private Vector3 normalScale = new Vector3(1f, 1f, 1f);
         private Vector3 enlargedScale = new Vector3(2f, 2f, 2f);
@@ -58,7 +61,29 @@ namespace Platformer
             {
                 ToggleCharacterSize();
             }
+
+            // Shoot
+            if (Input.GetMouseButtonDown(0) && currentAmmo > 0)
+            {
+                Shoot();
+            }
         }
+
+        public void AddAmmo(int amount)
+        {
+            currentAmmo += amount;
+        }
+
+        void Shoot()
+        {
+            GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            Debug.Log("Bullet instantiated at: " + bullet.transform.position);
+
+            bullet.transform.localScale = new Vector3(Mathf.Sign(transform.localScale.x), 1, 1);
+            Debug.Log("Bullet script started.");
+            currentAmmo--;
+        }
+
 
         // Reset jumpsLeft (Double Jump)
         void OnCollisionStay2D(Collision2D other)
@@ -73,13 +98,20 @@ namespace Platformer
                 {
                     RaycastHit2D hit = hits[i];
 
-                    // Check that we collided with ground below our feet
+                    //Check that we collided with ground below our feet
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
                         // Reset jump count 
                         jumpsLeft = 2;
                     }
                 }
+            }
+
+            // Get AmmoBox
+            if (other.gameObject.CompareTag("AmmoBox"))
+            {
+                AddAmmo(5);
+                Destroy(other.gameObject);
             }
         }
 
