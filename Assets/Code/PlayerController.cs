@@ -20,6 +20,7 @@ namespace Platformer
         private Vector3 normalScale = new Vector3(1f, 1f, 1f);
         private Vector3 enlargedScale = new Vector3(2f, 2f, 2f);
         private bool isEnlarged = false;
+        Animator animator;
 
         // Jump Force
         private float normalJumpForce = 8f;
@@ -29,6 +30,12 @@ namespace Platformer
         void Start()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
+            animator = GetComponent<Animator>();
+        }
+
+        private void FixedUpdate()
+        {
+            animator.SetFloat("Speed", _rigidbody2D.velocity.magnitude);
         }
 
         // Update is called once per frame
@@ -56,6 +63,7 @@ namespace Platformer
                     _rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 }
             }
+            animator.SetInteger("JumpsLeft", jumpsLeft);
 
             // Toggle character size with the "Q" key
             if (Input.GetKeyDown(KeyCode.Q))
