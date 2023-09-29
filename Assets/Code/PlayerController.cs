@@ -102,7 +102,7 @@ namespace Platformer
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
                         // Reset jump count 
-                        jumpsLeft = 2;
+                        jumpsLeft = 1;
                     }
                 }
             }
