@@ -24,7 +24,7 @@ namespace Platformer
 
         // Jump Force
         private float normalJumpForce = 8f;
-        private float enlargedJumpForce = 12f;
+        private float enlargedJumpForce = 16f;
 
         // Start is called before the first frame update
         void Start()
