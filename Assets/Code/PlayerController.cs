@@ -15,6 +15,7 @@ namespace Platformer
         public int keyCount = 0;
         public int currentAmmo = 0;
         public GameObject bulletPrefab;
+        public float sight = 0.85f;
 
         // Character Scale
         private Vector3 normalScale = new Vector3(1f, 1f, 1f);
@@ -24,7 +25,7 @@ namespace Platformer
 
         // Jump Force
         private float normalJumpForce = 8f;
-        private float enlargedJumpForce = 12f;
+        private float enlargedJumpForce = 16f;
 
         // Start is called before the first frame update
         void Start()
@@ -100,7 +101,7 @@ namespace Platformer
             if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
             {
                 // Check what is directly below our character's feet
-                RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.down, 0.85f);
+                RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.down, sight);
 
                 for (int i = 0; i < hits.Length; i++)
                 {
@@ -147,9 +148,25 @@ namespace Platformer
         void ToggleCharacterSize()
         {
             isEnlarged = !isEnlarged; // Toggle the size state.
+            if(isEnlarged)
+            {
+                sight *=2;
+            }
+            else
+            {
+                sight = 0.85f;
+            }
+
+
 
             // Change the character's scale based on the size state.
             transform.localScale = isEnlarged ? enlargedScale : normalScale;
+
+            // Update the jump force based on the size state.
+            float jumpForce = isEnlarged ? enlargedJumpForce : normalJumpForce;
+
+            jumpsLeft = 1;
         }
+
     }
 }
