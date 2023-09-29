@@ -6,6 +6,8 @@ TagManager:
   tags:
   - AmmoBox
   - Monster
+  - Key
+  - Exit
   layers:
   - Default
   - TransparentFX

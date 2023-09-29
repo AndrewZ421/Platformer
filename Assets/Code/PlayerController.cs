@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Platformer
 {
@@ -11,7 +12,7 @@ namespace Platformer
 
         // State Tracking
         public int jumpsLeft;
-
+        public int keyCount = 0;
         public int currentAmmo = 0;
         public GameObject bulletPrefab;
 
@@ -77,17 +78,16 @@ namespace Platformer
         void Shoot()
         {
             GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-            Debug.Log("Bullet instantiated at: " + bullet.transform.position);
 
             bullet.transform.localScale = new Vector3(Mathf.Sign(transform.localScale.x), 1, 1);
-            Debug.Log("Bullet script started.");
             currentAmmo--;
         }
 
 
-        // Reset jumpsLeft (Double Jump)
+        
         void OnCollisionStay2D(Collision2D other)
         {
+            // Reset jumpsLeft (Double Jump)
             // Check that we collided with Ground
             if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
             {
@@ -107,11 +107,31 @@ namespace Platformer
                 }
             }
 
-            // Get AmmoBox
+        }
+
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            // AmmoBox
             if (other.gameObject.CompareTag("AmmoBox"))
             {
                 AddAmmo(5);
                 Destroy(other.gameObject);
+            }
+
+            // Key
+            if (other.gameObject.CompareTag("Key"))
+            {
+                keyCount++;
+                Destroy(other.gameObject);
+            }
+
+            // Exit
+            if (other.gameObject.CompareTag("Exit"))
+            {
+                if (keyCount > 0)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                }
             }
         }
 
