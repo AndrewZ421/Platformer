@@ -831,7 +831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4371ab60f418d4485ab4b7937048aab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 36732144}
+  target: {fileID: 1556222553}
 --- !u!1001 &920244247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1174,6 +1174,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04cdcf5fcdf3f04499abf9b4ea02c6ed, type: 3}
+--- !u!4 &1556222553 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3313197476013178374, guid: 696bba32849298b41891cabe99b497a7, type: 3}
+  m_PrefabInstance: {fileID: 1687824489499415510}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1695361390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1581,6 +1586,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1057207552590647085, guid: 696bba32849298b41891cabe99b497a7, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 53ba09f82fe2d594da2ed91696edd674, type: 2}
     - target: {fileID: 369481278265600878, guid: 696bba32849298b41891cabe99b497a7, type: 3}
       propertyPath: m_Size.x
       value: 1
@@ -1629,6 +1638,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7208636924996320551, guid: 696bba32849298b41891cabe99b497a7, type: 3}
+      propertyPath: jumpsLeft
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7765762603444226241, guid: 696bba32849298b41891cabe99b497a7, type: 3}
       propertyPath: m_LinearDrag
       value: 0
@@ -1640,6 +1653,10 @@ PrefabInstance:
     - target: {fileID: 7765762603444226241, guid: 696bba32849298b41891cabe99b497a7, type: 3}
       propertyPath: m_GravityScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068014841789354998, guid: 696bba32849298b41891cabe99b497a7, type: 3}
+      propertyPath: jumpsLeft
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8643313331798032590, guid: 696bba32849298b41891cabe99b497a7, type: 3}
       propertyPath: m_Name

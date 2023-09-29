@@ -15,7 +15,7 @@ namespace Platformer
         public int keyCount = 0;
         public int currentAmmo = 0;
         public GameObject bulletPrefab;
-        public float sight = 0.85f;
+        public float sight = 0.6f;
 
         // Character Scale
         private Vector3 normalScale = new Vector3(1f, 1f, 1f);
@@ -24,8 +24,8 @@ namespace Platformer
         Animator animator;
 
         // Jump Force
-        private float normalJumpForce = 8f;
-        private float enlargedJumpForce = 16f;
+        private float normalJumpForce = 5f;
+        private float enlargedJumpForce = 8f;
 
         // Start is called before the first frame update
         void Start()
@@ -57,9 +57,12 @@ namespace Platformer
             // Jump
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                Debug.Log(jumpsLeft);
                 if (jumpsLeft > 0)
                 {
+                    Debug.Log("Before" + jumpsLeft);
                     jumpsLeft--;
+                    Debug.Log("After" + jumpsLeft);
                     float jumpForce = isEnlarged ? enlargedJumpForce : normalJumpForce;
                     _rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 }
@@ -92,8 +95,6 @@ namespace Platformer
             currentAmmo--;
         }
 
-
-        
         void OnCollisionStay2D(Collision2D other)
         {
             // Reset jumpsLeft (Double Jump)
@@ -110,12 +111,12 @@ namespace Platformer
                     //Check that we collided with ground below our feet
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
+                        Debug.Log("Reset jump");
                         // Reset jump count 
-                        jumpsLeft = 1;
+                        jumpsLeft = 2;
                     }
                 }
             }
-
         }
 
         void OnTriggerEnter2D(Collider2D other)
@@ -164,8 +165,6 @@ namespace Platformer
 
             // Update the jump force based on the size state.
             float jumpForce = isEnlarged ? enlargedJumpForce : normalJumpForce;
-
-            jumpsLeft = 1;
         }
 
     }
