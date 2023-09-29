@@ -114,6 +114,7 @@ namespace Platformer
                         Debug.Log("Reset jump");
                         // Reset jump count 
                         jumpsLeft = 2;
+                        jumpsLeft = 2;
                     }
                 }
             }
