@@ -103,7 +103,7 @@ namespace Platformer
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
                         // Reset jump count 
-                        jumpsLeft = 1;
+                        jumpsLeft = 2;
                     }
                 }
             }
@@ -157,7 +157,7 @@ namespace Platformer
             // Update the jump force based on the size state.
             float jumpForce = isEnlarged ? enlargedJumpForce : normalJumpForce;
 
-            jumpsLeft = 1;
+            jumpsLeft = 2;
         }
 
     }
