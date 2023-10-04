@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 namespace Platformer
 {
@@ -9,6 +10,8 @@ namespace Platformer
     {
         // Outlet
         Rigidbody2D _rigidbody2D;
+        public TMP_Text textBulletNum;
+        public TMP_Text textKey;
 
         // State Tracking
         public int jumpsLeft;
@@ -80,6 +83,13 @@ namespace Platformer
             {
                 Shoot();
             }
+
+            UpdateDisplay();
+        }
+
+        void UpdateDisplay() {
+            textBulletNum.text = "Bullet: " + currentAmmo.ToString();
+            textKey.text = "Key: " + keyCount.ToString();
         }
 
         void FixedUpdate()

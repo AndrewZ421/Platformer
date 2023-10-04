@@ -3,8 +3,8 @@ using UnityEngine;
 public class MovingMonster : MonoBehaviour
 {
     public float speed = 2.0f;
-    public float maxHeight = 2.0f;
-    public float minHeight = -2.0f;
+    public float maxHeight = 0f;
+    public float minHeight = -1.0f;
     private int direction = 1;
 
     public Sprite defaultSprite;
