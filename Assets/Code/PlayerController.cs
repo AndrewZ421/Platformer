@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 namespace Platformer
 {
@@ -9,13 +10,16 @@ namespace Platformer
     {
         // Outlet
         Rigidbody2D _rigidbody2D;
+        public TMP_Text textBulletNum;
+        public TMP_Text textKey;
 
         // State Tracking
         public int jumpsLeft;
         public int keyCount = 0;
         public int currentAmmo = 0;
         public GameObject bulletPrefab;
-        public float sight = 0.6f;
+        public float sight = 0.5f;
+        private bool shouldDecelerate = false;
 
         // Character Scale
         private Vector3 normalScale = new Vector3(1f, 1f, 1f);
@@ -25,18 +29,13 @@ namespace Platformer
 
         // Jump Force
         private float normalJumpForce = 5f;
-        private float enlargedJumpForce = 8f;
+        private float enlargedJumpForce = 6f;
 
         // Start is called before the first frame update
         void Start()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
-        }
-
-        private void FixedUpdate()
-        {
-            animator.SetFloat("Speed", _rigidbody2D.velocity.magnitude);
         }
 
         // Update is called once per frame
@@ -54,15 +53,19 @@ namespace Platformer
                 _rigidbody2D.AddForce(Vector2.right * 18f * Time.deltaTime, ForceMode2D.Impulse);
             }
 
+            // Stop moving
+            if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+            {
+                shouldDecelerate = true;
+            }
+
             // Jump
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Debug.Log(jumpsLeft);
                 if (jumpsLeft > 0)
                 {
-                    Debug.Log("Before" + jumpsLeft);
                     jumpsLeft--;
-                    Debug.Log("After" + jumpsLeft);
                     float jumpForce = isEnlarged ? enlargedJumpForce : normalJumpForce;
                     _rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 }
@@ -79,6 +82,39 @@ namespace Platformer
             if (Input.GetMouseButtonDown(0) && currentAmmo > 0)
             {
                 Shoot();
+            }
+
+            UpdateDisplay();
+        }
+
+        void UpdateDisplay() {
+            textBulletNum.text = "Bullet: " + currentAmmo.ToString();
+            textKey.text = "Key: " + keyCount.ToString();
+        }
+
+        void FixedUpdate()
+        {
+            animator.SetFloat("Speed", _rigidbody2D.velocity.magnitude);
+
+            // Stop moving
+            if (shouldDecelerate)
+            {
+                float decelerationSpeed = 5f;
+                Vector2 currentVelocity = _rigidbody2D.velocity;
+                float newHorizontalSpeed = Mathf.Lerp(currentVelocity.x, 0, decelerationSpeed * Time.fixedDeltaTime);
+                _rigidbody2D.velocity = new Vector2(newHorizontalSpeed, currentVelocity.y);
+
+                if (Mathf.Abs(newHorizontalSpeed) < 0.01f)
+                {
+                    _rigidbody2D.velocity = new Vector2(0, currentVelocity.y);
+                    shouldDecelerate = false;
+                }
+            }
+
+            float maxHorizontalSpeed = 3f;
+            if (Mathf.Abs(_rigidbody2D.velocity.x) > maxHorizontalSpeed)
+            {
+                _rigidbody2D.velocity = new Vector2(Mathf.Sign(_rigidbody2D.velocity.x) * maxHorizontalSpeed, _rigidbody2D.velocity.y);
             }
         }
 
@@ -111,9 +147,7 @@ namespace Platformer
                     //Check that we collided with ground below our feet
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
-                        Debug.Log("Reset jump");
                         // Reset jump count 
-                        jumpsLeft = 2;
                         jumpsLeft = 2;
                     }
                 }
@@ -152,14 +186,12 @@ namespace Platformer
             isEnlarged = !isEnlarged; // Toggle the size state.
             if(isEnlarged)
             {
-                sight *=2;
+                sight = 1.1f;
             }
             else
             {
-                sight = 0.85f;
+                sight = 0.6f;
             }
-
-
 
             // Change the character's scale based on the size state.
             transform.localScale = isEnlarged ? enlargedScale : normalScale;
