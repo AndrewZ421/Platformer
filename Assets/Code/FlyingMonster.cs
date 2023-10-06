@@ -21,9 +21,15 @@ public class MovingMonster : MonoBehaviour
     {
         transform.Translate(0, direction * speed * Time.deltaTime, 0);
 
-        if (transform.position.y > maxHeight || transform.position.y < minHeight)
+        if (transform.position.y > maxHeight)
         {
-            direction *= -1;
+            direction = -1;
+            transform.position = new Vector3(transform.position.x, maxHeight, transform.position.z);
+        }
+        else if (transform.position.y < minHeight)
+        {
+            direction = 1;
+            transform.position = new Vector3(transform.position.x, minHeight, transform.position.z);
         }
 
         if (direction > 0)
