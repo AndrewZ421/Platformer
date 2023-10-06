@@ -26,7 +26,7 @@ namespace Platformer
 
         // Character Scale
         private Vector3 normalScale = new Vector3(1f, 1f, 1f);
-        private Vector3 enlargedScale = new Vector3(2f, 2f, 2f);
+        private Vector3 enlargedScale = new Vector3(1.5f, 2f, 2f);
         private bool isEnlarged = false;
         Animator animator;
 
@@ -219,17 +219,17 @@ namespace Platformer
             if (isEnlarged)
             {
                 sight = 1.1f;
-              
+
             }
             else
             {
                 sight = 0.6f;
-               
+
             }
 
             // Change the character's scale based on the size state.
-            transform.localScale = isEnlarged ? enlargedScale : normalScale;
 
+            transform.localScale = isEnlarged ? enlargedScale : normalScale;
             // Update the jump force based on the size state.
             float jumpForce = isEnlarged ? enlargedJumpForce : normalJumpForce;
         }
