@@ -14,7 +14,7 @@ namespace Platformer
         Rigidbody2D _rigidbody2D;
         public TMP_Text textBulletNum;
         public TMP_Text textKey;
-        public Transform Botton;
+        public Transform Bottom;
 
         // State Tracking
         public int jumpsLeft;
@@ -159,7 +159,7 @@ namespace Platformer
             if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
             {
                 // Check what is directly below our character's feet
-                RaycastHit2D[] hits = Physics2D.RaycastAll(Botton.position, Vector2.down, 0.1f);
+                RaycastHit2D[] hits = Physics2D.RaycastAll(Bottom.position, Vector2.down, 0.1f);
 
                 for (int i = 0; i < hits.Length; i++)
                 {
