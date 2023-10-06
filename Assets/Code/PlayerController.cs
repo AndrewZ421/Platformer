@@ -32,7 +32,7 @@ namespace Platformer
 
         // Jump Force
         private float normalJumpForce = 5f;
-        private float enlargedJumpForce = 6f;
+        private float enlargedJumpForce = 9f;
 
         void Awake()
         {
@@ -80,11 +80,14 @@ namespace Platformer
             // Jump
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                Debug.Log("FUCK");
                 Debug.Log(jumpsLeft);
                 if (jumpsLeft > 0)
                 {
+                    Debug.Log("FUCKA");
                     jumpsLeft--;
                     float jumpForce = isEnlarged ? enlargedJumpForce : normalJumpForce;
+                    _rigidbody2D.velocity = Vector2.zero;
                     _rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 }
             }
@@ -105,7 +108,8 @@ namespace Platformer
             UpdateDisplay();
         }
 
-        void UpdateDisplay() {
+        void UpdateDisplay()
+        {
             textBulletNum.text = "Bullet: " + currentAmmo.ToString();
             textKey.text = "Key: " + keyCount.ToString();
         }
@@ -165,6 +169,7 @@ namespace Platformer
                     //Check that we collided with ground below our feet
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
+                        Debug.Log("fuckc");
                         // Reset jump count 
                         jumpsLeft = 2;
                     }
@@ -202,7 +207,7 @@ namespace Platformer
                     {
                         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                     }
-                    
+
                 }
             }
         }
@@ -211,13 +216,15 @@ namespace Platformer
         void ToggleCharacterSize()
         {
             isEnlarged = !isEnlarged; // Toggle the size state.
-            if(isEnlarged)
+            if (isEnlarged)
             {
                 sight = 1.1f;
+              
             }
             else
             {
                 sight = 0.6f;
+               
             }
 
             // Change the character's scale based on the size state.
