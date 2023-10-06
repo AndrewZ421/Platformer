@@ -14,6 +14,7 @@ namespace Platformer
         Rigidbody2D _rigidbody2D;
         public TMP_Text textBulletNum;
         public TMP_Text textKey;
+        public Transform Botton;
 
         // State Tracking
         public int jumpsLeft;
@@ -26,13 +27,13 @@ namespace Platformer
 
         // Character Scale
         private Vector3 normalScale = new Vector3(1f, 1f, 1f);
-        private Vector3 enlargedScale = new Vector3(1.5f, 2f, 2f);
+        private Vector3 enlargedScale = Vector3.one * 1.5f;
         private bool isEnlarged = false;
         Animator animator;
 
         // Jump Force
         private float normalJumpForce = 5f;
-        private float enlargedJumpForce = 9f;
+        private float enlargedJumpForce = 8f;
 
         void Awake()
         {
@@ -80,11 +81,9 @@ namespace Platformer
             // Jump
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log("FUCK");
                 Debug.Log(jumpsLeft);
                 if (jumpsLeft > 0)
                 {
-                    Debug.Log("FUCKA");
                     jumpsLeft--;
                     float jumpForce = isEnlarged ? enlargedJumpForce : normalJumpForce;
                     _rigidbody2D.velocity = Vector2.zero;
@@ -153,14 +152,14 @@ namespace Platformer
             currentAmmo--;
         }
 
+
         void OnCollisionStay2D(Collision2D other)
         {
-            // Reset jumpsLeft (Double Jump)
-            // Check that we collided with Ground
+            //Check that we collided with Ground
             if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
             {
                 // Check what is directly below our character's feet
-                RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.down, sight);
+                RaycastHit2D[] hits = Physics2D.RaycastAll(Botton.position, Vector2.down, 0.1f);
 
                 for (int i = 0; i < hits.Length; i++)
                 {
@@ -169,13 +168,14 @@ namespace Platformer
                     //Check that we collided with ground below our feet
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
-                        Debug.Log("fuckc");
+                        
                         // Reset jump count 
                         jumpsLeft = 2;
                     }
                 }
             }
         }
+        
 
         void OnTriggerEnter2D(Collider2D other)
         {
@@ -215,18 +215,10 @@ namespace Platformer
         // Toggle character size
         void ToggleCharacterSize()
         {
+            
             isEnlarged = !isEnlarged; // Toggle the size state.
-            if (isEnlarged)
-            {
-                sight = 1.1f;
-
-            }
-            else
-            {
-                sight = 0.6f;
-
-            }
-
+            Debug.Log($"is enlarged:{isEnlarged}");
+            
             // Change the character's scale based on the size state.
 
             transform.localScale = isEnlarged ? enlargedScale : normalScale;
