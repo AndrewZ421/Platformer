@@ -193,7 +193,16 @@ namespace Platformer
             {
                 if (keyCount > 0)
                 {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    if (SceneManager.GetActiveScene().name == "level1")
+                    {
+                        SceneManager.LoadScene("level2");
+                        GameController.instance.UpdateTextLevel();
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    }
+                    
                 }
             }
         }

@@ -70,6 +70,7 @@ namespace Platformer
         {
             Debug.Log(levelName);
             SceneManager.LoadScene(levelName);
+            GameController.instance.UpdateTextLevel();
         }
 
         public void Restart()
