@@ -8,6 +8,8 @@ namespace Platformer
 {
     public class PlayerController : MonoBehaviour
     {
+        public static PlayerController instance;
+
         // Outlet
         Rigidbody2D _rigidbody2D;
         public TMP_Text textBulletNum;
@@ -20,6 +22,7 @@ namespace Platformer
         public GameObject bulletPrefab;
         public float sight = 0.5f;
         private bool shouldDecelerate = false;
+        public bool isPaused;
 
         // Character Scale
         private Vector3 normalScale = new Vector3(1f, 1f, 1f);
@@ -31,6 +34,11 @@ namespace Platformer
         private float normalJumpForce = 5f;
         private float enlargedJumpForce = 6f;
 
+        void Awake()
+        {
+            instance = this;
+        }
+
         // Start is called before the first frame update
         void Start()
         {
@@ -41,6 +49,16 @@ namespace Platformer
         // Update is called once per frame
         void Update()
         {
+            if (isPaused)
+            {
+                return;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                MenuController.instance.Show();
+            }
+
             // Move Player Left
             if (Input.GetKey(KeyCode.A))
             {
