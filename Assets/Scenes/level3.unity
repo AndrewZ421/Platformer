@@ -323,6 +323,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &291028180 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 473228546249870846, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
+  m_PrefabInstance: {fileID: 1576966408}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &373682278
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,6 +745,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8068014841789354998, guid: 696bba32849298b41891cabe99b497a7, type: 3}
+      propertyPath: textKey
+      value: 
+      objectReference: {fileID: 291028180}
+    - target: {fileID: 8068014841789354998, guid: 696bba32849298b41891cabe99b497a7, type: 3}
+      propertyPath: textBulletNum
+      value: 
+      objectReference: {fileID: 2008086867}
     - target: {fileID: 8643313331798032590, guid: 696bba32849298b41891cabe99b497a7, type: 3}
       propertyPath: m_Name
       value: Player
@@ -743,6 +762,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 696bba32849298b41891cabe99b497a7, type: 3}
+--- !u!114 &2008086867 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6190149038236876280, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
+  m_PrefabInstance: {fileID: 1576966408}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2054908298
 PrefabInstance:
   m_ObjectHideFlags: 0

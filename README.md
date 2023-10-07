@@ -35,5 +35,6 @@ A level-based game where players must navigate obstacles (jump over obstacles, a
 stay where it is. The character cannot touch the monster. Otherwise, the game will restart.
 - ![Bullet](Assets/Textures/kenney_pixel-platformer/Tiles/tile_0159.png) : This is an ammunition box. The character will get five bullets by touching this box.
 - ![Bullet](Assets/Textures/kenney_pixel-platformer/Tiles/tile_0090.png) : This is a bullet. The character can fire bullets forward by clicking the left mouse button.
-- ![Key](Assets/Textures/kenney_pixel-platformer/Tiles/tile_0027.png) : This is a key. The character need to get a key to open the exit.
-- ![Exit](Assets/Textures/kenney_pixel-platformer/Tiles/tile_0150.png) : This is the exit. The character need to get here to pass the level.
+- ![Key](Assets/Textures/kenney_pixel-platformer/Tiles/tile_0027.png) : This is a key. The character needs to get a key to open the exit.
+- ![Exit](Assets/Textures/kenney_pixel-platformer/Tiles/tile_0150.png) : This is the exit. The character needs to get here to pass the level.
+- ![Exit](Assets/Textures/kenney_pixel-platformer-industrial-expansion/Tiles/tile_0029.png ) : This is the water. The character needs to jump over it, otherwise you will drop through it.
