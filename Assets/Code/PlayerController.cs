@@ -203,6 +203,11 @@ namespace Platformer
                         SceneManager.LoadScene("level2");
                         GameController.instance.UpdateTextLevel();
                     }
+                    else if (SceneManager.GetActiveScene().name == "level2")
+                    {
+                        SceneManager.LoadScene("level3");
+                        GameController.instance.UpdateTextLevel();
+                    }
                     else
                     {
                         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

@@ -40,6 +40,10 @@ namespace Platformer
             {
                 textLevel.text = "Level 2";
             }
+            else if (SceneManager.GetActiveScene().name == "level3")
+            {
+                textLevel.text = "Level 3";
+            }
         }
     }
 }
