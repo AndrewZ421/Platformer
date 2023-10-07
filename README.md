@@ -27,6 +27,7 @@ A level-based game where players must navigate obstacles (jump over obstacles, a
 - Press Q to make the character get bigger or smaller. the bigger character jumps higher.
 - Press the spacebar to make the character jump. Press the spacebar twice to double jump.
 - Clicking the left mouse button to fire when you have bullets.
+- Press Esc to open the game menu.
 
 ### 2.2 Objects in the game
 - ![Bat](Assets/Textures/kenney_pixel-platformer/Characters/character_0025.png): This is a flying monster. It will fly up and down. The character cannot touch the monster. Otherwise the game will restart.
