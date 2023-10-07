@@ -3,9 +3,11 @@ using UnityEngine;
 public class MovingMonster : MonoBehaviour
 {
     public float speed = 2.0f;
-    public float maxHeight = 0f;
-    public float minHeight = -1.0f;
+    public float range = 1f;
     private int direction = 1;
+
+    public float maxHeight;
+    public float minHeight;
 
     public Sprite defaultSprite;
     public Sprite movingUpSprite;
@@ -15,11 +17,15 @@ public class MovingMonster : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        maxHeight = transform.position.y + range;
+        minHeight = transform.position.y - range;
     }
 
     void Update()
     {
         transform.Translate(0, direction * speed * Time.deltaTime, 0);
+
+        
 
         if (transform.position.y > maxHeight)
         {

@@ -1762,6 +1762,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2249787366373362614, guid: 9a91fb71ad4bd5e4683df5bfc2320b3e, type: 3}
+      propertyPath: maxHeight
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -2249787366373362614, guid: 9a91fb71ad4bd5e4683df5bfc2320b3e, type: 3}
+      propertyPath: minHeight
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1255965163194342396, guid: 9a91fb71ad4bd5e4683df5bfc2320b3e, type: 3}
       propertyPath: m_Name
       value: Monster_fly (2)
