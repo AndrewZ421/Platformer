@@ -15,6 +15,7 @@ namespace Platformer
         public TMP_Text textBulletNum;
         public TMP_Text textKey;
         public Transform Bottom;
+        public Transform aimPivot;
 
         // State Tracking
         public int jumpsLeft;
@@ -98,6 +99,16 @@ namespace Platformer
                 ToggleCharacterSize();
             }
 
+            // Aim Toward Mouse
+            Vector3 mousePosition = Input.mousePosition;
+            Vector3 mousePositionInWorld = Camera.main.ScreenToWorldPoint(mousePosition);
+            Vector3 directionFromPlayerToMouse = mousePositionInWorld - transform.position;
+
+            float radiansToMouse = Mathf.Atan2(directionFromPlayerToMouse.y, directionFromPlayerToMouse.x);
+            float angleToMouse = radiansToMouse * Mathf.Rad2Deg;
+
+            aimPivot.rotation = Quaternion.Euler(0, 0, angleToMouse);
+
             // Shoot
             if (Input.GetMouseButtonDown(0) && currentAmmo > 0)
             {
@@ -146,9 +157,13 @@ namespace Platformer
 
         void Shoot()
         {
-            GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+           //  GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
 
-            bullet.transform.localScale = new Vector3(Mathf.Sign(transform.localScale.x), 1, 1);
+            // bullet.transform.localScale = new Vector3(Mathf.Sign(transform.localScale.x), 1, 1);
+
+            GameObject newProjectile = Instantiate(bulletPrefab);
+            newProjectile.transform.position = transform.position;
+            newProjectile.transform.rotation = aimPivot.rotation;
             currentAmmo--;
         }
 
