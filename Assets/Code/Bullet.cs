@@ -20,8 +20,12 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Monster"))
         {
             Destroy(collision.gameObject);
+            SoundManager.instance.PlaySoundHit();
         }
-
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            SoundManager.instance.PlaySoundMiss();
+        }
         Destroy(gameObject);
     }
 }
