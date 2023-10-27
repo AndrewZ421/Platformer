@@ -25,8 +25,6 @@ public class MovingMonster : MonoBehaviour
     {
         transform.Translate(0, direction * speed * Time.deltaTime, 0);
 
-        
-
         if (transform.position.y > maxHeight)
         {
             direction = -1;

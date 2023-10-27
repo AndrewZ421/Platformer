@@ -306,7 +306,7 @@ MonoBehaviour:
   aimPivot: {fileID: 8399657586651240799}
   jumpsLeft: 2
   keyCount: 0
-  currentAmmo: 0
+  currentAmmo: 5
   bulletPrefab: {fileID: 6577440417934427355, guid: 0e8c968d308ae794fa273b853d724805, type: 3}
   sight: 0.6
   isPaused: 0

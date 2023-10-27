@@ -1,3 +1,4 @@
+using Platformer;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,12 +24,13 @@ public class MonsterCollision : MonoBehaviour
                 }
             }
 
-            RestartGame();
+            Gameover();
         }
     }
 
-    void RestartGame()
+    void Gameover()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SoundManager.instance.PlaySoundDie();
+        GameoverController.instance.Show();
     }
 }

@@ -11,7 +11,8 @@ namespace Platformer
         {
             if (other.gameObject.GetComponent<PlayerController>())
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                SoundManager.instance.PlaySoundDie();
+                GameoverController.instance.Show();
             }
         }
     }

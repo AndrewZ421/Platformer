@@ -2041,6 +2041,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1738782354}
     - target: {fileID: 8068014841789354998, guid: 696bba32849298b41891cabe99b497a7, type: 3}
+      propertyPath: currentAmmo
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068014841789354998, guid: 696bba32849298b41891cabe99b497a7, type: 3}
       propertyPath: textBulletNum
       value: 
       objectReference: {fileID: 532054576}
