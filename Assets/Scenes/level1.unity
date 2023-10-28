@@ -2139,7 +2139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1026784962372433944, guid: fdd10486ad07b224f91479bbfea05e15, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.4103584
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 1026784962372433944, guid: fdd10486ad07b224f91479bbfea05e15, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2346,17 +2346,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1355234400964950537, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
-      propertyPath: m_Name
-      value: Text (TMP) - Bullet
-      objectReference: {fileID: 0}
     - target: {fileID: 2181376466664192365, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 4696837526405383231, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
-      propertyPath: m_Name
-      value: Text (TMP) - Key
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
