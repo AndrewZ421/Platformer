@@ -1747,6 +1747,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2214432266337323794, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: level3
+      objectReference: {fileID: 0}
     - target: {fileID: 5024170640185118971, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 1150
@@ -2888,11 +2892,11 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 568365395}
+  - {fileID: 1141806946}
   - {fileID: 1014641431}
   - {fileID: 474589474}
   - {fileID: 807005439}
   - {fileID: 148454633}
-  - {fileID: 1141806946}
   - {fileID: 258789552}
   - {fileID: 806323534}
   - {fileID: 202352030}

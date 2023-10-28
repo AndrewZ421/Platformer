@@ -48,6 +48,7 @@ MonoBehaviour:
   missSound: {fileID: 8300000, guid: d3c3cc86c6252b34196ab8d34d068667, type: 3}
   hitSound: {fileID: 8300000, guid: 58a6076897f4d2e4cbe90cb2faee3843, type: 3}
   dieSound: {fileID: 8300000, guid: 911127e315d547644a01ba4b1754ef7a, type: 3}
+  levelUpSound: {fileID: 8300000, guid: e0a4529557b717a48bb6f423a9739494, type: 3}
 --- !u!82 &5645703563465029979
 AudioSource:
   m_ObjectHideFlags: 0

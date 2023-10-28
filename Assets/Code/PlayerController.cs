@@ -213,21 +213,23 @@ namespace Platformer
             {
                 if (keyCount > 0)
                 {
-                    if (SceneManager.GetActiveScene().name == "level1")
-                    {
-                        SceneManager.LoadScene("level2");
-                        GameController.instance.UpdateTextLevel();
-                    }
-                    else if (SceneManager.GetActiveScene().name == "level2")
-                    {
-                        SceneManager.LoadScene("level3");
-                        GameController.instance.UpdateTextLevel();
-                    }
-                    else
-                    {
-                        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                    }
+                    //if (SceneManager.GetActiveScene().name == "level1")
+                    //{
+                    //    SceneManager.LoadScene("level2");
+                    //    GameController.instance.UpdateTextLevel();
+                    //}
+                    //else if (SceneManager.GetActiveScene().name == "level2")
+                    //{
+                    //    SceneManager.LoadScene("level3");
+                    //    GameController.instance.UpdateTextLevel();
+                    //}
+                    //else
+                    //{
+                    //    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    //}
 
+                    SoundManager.instance.PlaySoundLevelUp();
+                    LevelUpController.instance.Show();
                 }
             }
         }
