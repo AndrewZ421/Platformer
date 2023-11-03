@@ -480,6 +480,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3313197476013178374, guid: 696bba32849298b41891cabe99b497a7, type: 3}
   m_PrefabInstance: {fileID: 1324881608}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &769091666 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8774955975249761897, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
+  m_PrefabInstance: {fileID: 6652839339344266347}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &820958040
 GameObject:
   m_ObjectHideFlags: 0
@@ -2069,13 +2080,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8068014841789354998, guid: 696bba32849298b41891cabe99b497a7, type: 3}
+      propertyPath: textHP
+      value: 
+      objectReference: {fileID: 769091666}
+    - target: {fileID: 8068014841789354998, guid: 696bba32849298b41891cabe99b497a7, type: 3}
       propertyPath: textKey
       value: 
       objectReference: {fileID: 1738782354}
-    - target: {fileID: 8068014841789354998, guid: 696bba32849298b41891cabe99b497a7, type: 3}
-      propertyPath: currentAmmo
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 8068014841789354998, guid: 696bba32849298b41891cabe99b497a7, type: 3}
       propertyPath: textBulletNum
       value: 
@@ -2461,10 +2472,6 @@ PrefabInstance:
     - target: {fileID: 678223832266812129, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1949846168728494299, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 2181376466664192365, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
       propertyPath: m_Name

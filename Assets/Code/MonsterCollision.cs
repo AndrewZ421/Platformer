@@ -10,27 +10,11 @@ public class MonsterCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            NewPlayerHP hp = collision.gameObject.GetComponent<NewPlayerHP>();
+            PlayerHealth hp = collision.gameObject.GetComponent<PlayerHealth>();
             if (hp != null)
             {
-                hp.HP--;
-                if (hp.HP < 1)
-                {
-                    hp.HP = 0;
-                }
-                else
-                {
-                    return;
-                }
+                hp.TakeDamage(1); // Each collision with a monster takes away 1 HP
             }
-
-            Gameover();
         }
-    }
-
-    void Gameover()
-    {
-        SoundManager.instance.PlaySoundDie();
-        GameoverController.instance.Show();
     }
 }

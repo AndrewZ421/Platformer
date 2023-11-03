@@ -16,6 +16,7 @@ namespace Platformer
         public TMP_Text textKey;
         public Transform Bottom;
         public Transform aimPivot;
+        public TMP_Text textHP;
 
         // State Tracking
         public int jumpsLeft;
@@ -155,6 +156,11 @@ namespace Platformer
             currentAmmo += amount;
         }
 
+        public void UpdateHPDisplay(int currentHP)
+        {
+            textHP.text = "HP: " + currentHP.ToString();
+        }
+
         void Shoot()
         {
            //  GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
@@ -166,7 +172,6 @@ namespace Platformer
             newProjectile.transform.rotation = aimPivot.rotation;
             currentAmmo--;
         }
-
 
         void OnCollisionStay2D(Collision2D other)
         {
@@ -190,7 +195,6 @@ namespace Platformer
                 }
             }
         }
-        
 
         void OnTriggerEnter2D(Collider2D other)
         {
