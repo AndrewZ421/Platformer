@@ -12,6 +12,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip hitSound;
     public AudioClip dieSound;
     public AudioClip levelUpSound;
+    public AudioClip hurtSound;
 
     void Awake()
     {
@@ -41,5 +42,10 @@ public class SoundManager : MonoBehaviour
     public void PlaySoundLevelUp()
     {
         audioSource.PlayOneShot(levelUpSound);
+    }
+
+    public void PlaySoundhurt()
+    {
+        audioSource.PlayOneShot(hurtSound);
     }
 }
