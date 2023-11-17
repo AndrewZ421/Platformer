@@ -2473,9 +2473,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1924333814705671923, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2153666978704877368, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -125
+      objectReference: {fileID: 0}
     - target: {fileID: 2181376466664192365, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684776232001424043, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4807233057073743994, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5147625993661496451, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672574356397265343, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7232148817260693770, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798799609402875146, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -125
+      objectReference: {fileID: 0}
+    - target: {fileID: 9148813533633595827, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2611,6 +2647,7 @@ SceneRoots:
   - {fileID: 503201595}
   - {fileID: 820958042}
   - {fileID: 4241476147164984977}
+  - {fileID: 6652839339344266347}
   - {fileID: 1324881608}
   - {fileID: 975372084}
   - {fileID: 371255066}
@@ -2619,7 +2656,6 @@ SceneRoots:
   - {fileID: 368528153}
   - {fileID: 1741239996}
   - {fileID: 61174506}
-  - {fileID: 6652839339344266347}
   - {fileID: 8115986596421297160}
   - {fileID: 7781264328052574533}
   - {fileID: 1056889617}
