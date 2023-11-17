@@ -163,7 +163,7 @@ namespace Platformer
 
         void Shoot()
         {
-           //  GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            //  GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
 
             // bullet.transform.localScale = new Vector3(Mathf.Sign(transform.localScale.x), 1, 1);
 
@@ -188,7 +188,7 @@ namespace Platformer
                     //Check that we collided with ground below our feet
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
-                        
+
                         // Reset jump count 
                         jumpsLeft = 2;
                     }
@@ -241,10 +241,10 @@ namespace Platformer
         // Toggle character size
         void ToggleCharacterSize()
         {
-            
+
             isEnlarged = !isEnlarged; // Toggle the size state.
             Debug.Log($"is enlarged:{isEnlarged}");
-            
+
             // Change the character's scale based on the size state.
 
             transform.localScale = isEnlarged ? enlargedScale : normalScale;
