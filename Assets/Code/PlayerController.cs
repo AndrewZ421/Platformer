@@ -88,7 +88,7 @@ namespace Platformer
                 {
                     jumpsLeft--;
                     float jumpForce = isEnlarged ? enlargedJumpForce : normalJumpForce;
-                    // _rigidbody2D.velocity = Vector2.zero;
+                    _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, 0);
                     _rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 }
             }
@@ -185,7 +185,7 @@ namespace Platformer
                 {
                     RaycastHit2D hit = hits[i];
 
-                    //Check that we collided with ground below our feet
+                    // Check that we collided with ground below our feet
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
 
@@ -217,21 +217,6 @@ namespace Platformer
             {
                 if (keyCount > 0)
                 {
-                    //if (SceneManager.GetActiveScene().name == "level1")
-                    //{
-                    //    SceneManager.LoadScene("level2");
-                    //    GameController.instance.UpdateTextLevel();
-                    //}
-                    //else if (SceneManager.GetActiveScene().name == "level2")
-                    //{
-                    //    SceneManager.LoadScene("level3");
-                    //    GameController.instance.UpdateTextLevel();
-                    //}
-                    //else
-                    //{
-                    //    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                    //}
-
                     SoundManager.instance.PlaySoundLevelUp();
                     LevelUpController.instance.Show();
                 }
