@@ -32,17 +32,18 @@ namespace Platformer
         }
 
         public void UpdateTextLevel() {
-            if (SceneManager.GetActiveScene().name == "level1")
+            string currentLevelName = SceneManager.GetActiveScene().name;
+            string levelPrefix = "level";
+
+            int levelNumber;
+            if (int.TryParse(currentLevelName.Substring(levelPrefix.Length), out levelNumber))
             {
-                textLevel.text = "Level 1";
+                textLevel.text = "Level " + levelNumber;
             }
-            else if (SceneManager.GetActiveScene().name == "level2")
+            else
             {
-                textLevel.text = "Level 2";
-            }
-            else if (SceneManager.GetActiveScene().name == "level3")
-            {
-                textLevel.text = "Level 3";
+                Debug.LogError("Current level name does not contain a valid number: " + currentLevelName);
+                textLevel.text = "Unknown Level";
             }
         }
     }

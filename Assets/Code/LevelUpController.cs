@@ -66,11 +66,22 @@ namespace Platformer
             GameController.instance.UpdateTextLevel();
         }
 
-        public void LoadNextLevel(string nextLevelName)
+        public void LoadNextLevel()
         {
-            Debug.Log(nextLevelName);
-            SceneManager.LoadScene(nextLevelName);
-            GameController.instance.UpdateTextLevel();
+            string currentLevelName = SceneManager.GetActiveScene().name;
+            string levelPrefix = "level";
+
+            int currentLevelNumber;
+            if (int.TryParse(currentLevelName.Substring(levelPrefix.Length), out currentLevelNumber))
+            {
+                string nextLevelName = levelPrefix + (currentLevelNumber + 1);
+                SceneManager.LoadScene(nextLevelName);
+                GameController.instance.UpdateTextLevel();
+            }
+            else
+            {
+                Debug.LogError("Current level name does not contain a valid number: " + currentLevelName);
+            }
         }
     }
 }

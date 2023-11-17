@@ -6832,7 +6832,7 @@ MonoBehaviour:
       - m_Target: {fileID: 4948666270744544731}
         m_TargetAssemblyTypeName: Platformer.LevelUpController, Assembly-CSharp
         m_MethodName: LoadNextLevel
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
