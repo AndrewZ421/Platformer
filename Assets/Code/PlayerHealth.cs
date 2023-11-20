@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int initHP = 3; // Init health points
+    public int initHP = 3; // Initial health points
     public int currentHP; // Current health points
     public PlayerController playerController;
+    private bool isTestMode = false; // Flag for test mode
 
     void Start()
     {
@@ -16,20 +17,46 @@ public class PlayerHealth : MonoBehaviour
         playerController.UpdateHPDisplay(currentHP);
     }
 
+    void Update()
+    {
+        // Check if the test mode key is pressed
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            ToggleTestMode();
+        }
+    }
+
+    private void ToggleTestMode()
+    {
+        isTestMode = !isTestMode; // Toggle test mode state
+        if (isTestMode)
+        {
+            currentHP = 99; // Set high health value
+        }
+        else
+        {
+            currentHP = initHP; // Reset to initial health value
+        }
+        playerController.UpdateHPDisplay(currentHP); // Update display
+    }
+
     public void TakeDamage(int damage)
     {
-        currentHP -= damage;
-        SoundManager.instance.PlaySoundhurt();
-        playerController.UpdateHPDisplay(currentHP);
-        if (currentHP <= 0)
+        if (!isTestMode) // If not in test mode
         {
-            Die();
+            currentHP -= damage;
+            SoundManager.instance.PlaySoundhurt();
+            playerController.UpdateHPDisplay(currentHP);
+            if (currentHP <= 0)
+            {
+                Die();
+            }
         }
     }
 
     void Die()
     {
-        // Handle the player's death here
+        // Handle player's death logic
         Debug.Log("Player has died!");
         Gameover();
     }

@@ -11,6 +11,7 @@ public class CountdownTimer : MonoBehaviour
     private float currentTime;
     public TextMeshProUGUI countdownText;
     private bool isGameOver = false;
+    private bool isTestMode = false; // Flag for test mode
 
     void Start()
     {
@@ -19,7 +20,13 @@ public class CountdownTimer : MonoBehaviour
 
     void Update()
     {
-        if (isGameOver)
+        // Check if the test mode key is pressed
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            ToggleTestMode();
+        }
+
+        if (isGameOver || isTestMode) // Pause timer if game is over or in test mode
         {
             return;
         }
@@ -35,6 +42,11 @@ public class CountdownTimer : MonoBehaviour
             isGameOver = true;
             EndGame();
         }
+    }
+
+    private void ToggleTestMode()
+    {
+        isTestMode = !isTestMode; // Toggle test mode state
     }
 
     void EndGame()

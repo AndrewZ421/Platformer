@@ -27,6 +27,9 @@ namespace Platformer
         private bool shouldDecelerate = false;
         public bool isPaused;
 
+        private bool isTestMode = false; // Flag for test mode
+        private int originalAmmo; // To store the original ammo count
+
         // Character Scale
         private Vector3 normalScale = new Vector3(1f, 1f, 1f);
         private Vector3 enlargedScale = Vector3.one * 1.5f;
@@ -74,6 +77,12 @@ namespace Platformer
                 _rigidbody2D.AddForce(Vector2.right * 18f * Time.deltaTime, ForceMode2D.Impulse);
             }
 
+            // Toggle Test Mode
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                ToggleTestMode();
+            }
+
             // Stop moving
             if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
             {
@@ -117,6 +126,24 @@ namespace Platformer
             }
 
             UpdateDisplay();
+        }
+
+        private void ToggleTestMode()
+        {
+            if (!isTestMode)
+            {
+                // Entering test mode
+                originalAmmo = currentAmmo; // Store the original ammo count
+                currentAmmo = 99; // Set ammo to 99
+            }
+            else
+            {
+                // Exiting test mode
+                currentAmmo = originalAmmo; // Restore the original ammo count
+            }
+
+            isTestMode = !isTestMode; // Toggle the test mode state
+            UpdateDisplay(); // Update the ammo display
         }
 
         void UpdateDisplay()
