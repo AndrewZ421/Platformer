@@ -2279,7 +2279,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 373931428344757400, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
       propertyPath: countdownTime
-      value: 40
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 384969288173214498, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
       propertyPath: m_text

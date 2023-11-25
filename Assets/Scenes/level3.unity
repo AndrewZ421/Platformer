@@ -2954,7 +2954,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 373931428344757400, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
       propertyPath: countdownTime
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 678223832266812129, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
       propertyPath: m_Pivot.x
