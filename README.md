@@ -18,6 +18,8 @@ A level-based game where players must navigate obstacles (jump over obstacles, a
 ### 1.2 Resource Links
 - Pixel Platformer (https://www.kenney.nl/assets/pixel-platformer)
 - Pixel Platformer Industrial Expansion (https://www.kenney.nl/assets/pixel-platformer-industrial-expansion)
+- Pixel Platformer Art Requests (https://www.kenney.nl/assets/platformer-art-requests)
+- Pixel Platformer Art Deluxe (https://www.kenney.nl/assets/platformer-art-deluxe)
 
 ## 2. Gameplay Description
 
