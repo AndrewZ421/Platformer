@@ -5914,8 +5914,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: level3
       objectReference: {fileID: 0}
+    - target: {fileID: 4198082727383257277, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8450552798113035188, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
+      propertyPath: m_text
+      value: You pass all levels!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6568663334550252652, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 154cfccd23249a447a7c9b74df95f6bb, type: 3}
