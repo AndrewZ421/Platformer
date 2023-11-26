@@ -44,5 +44,19 @@ stay where it is. The character cannot touch the monster. Otherwise the player' 
 - ![HP](Assets/Textures/kenney_pixel-platformer/Tiles/tile_0044.png) : This is the HP replenishing prop. The character's HP will be increased by 1 if the character's HP is below the initial value.
 
 ## 3. Levels in Game
+In total we have five levels. Here are the previews for the levels.
 
-### Level 1
+### 3.1 Level 1
+<img src="Assets/Textures/Others/level1.png" alt="level1" height="300"/>
+
+### 3.2 Level 2
+<img src="Assets/Textures/Others/level2.png" alt="level2" height="310"/>
+
+### 3.3 Level 3
+<!-- <img src="Assets/Textures/Others/level3.png" alt="level3" height="300"/> -->
+
+### 3.4 Level 4
+<img src="Assets/Textures/Others/level4.png" alt="level4" height="350"/>
+
+### 3.5 Level 5
+<!-- <img src="Assets/Textures/Others/level5.png" alt="level5" height="300"/> -->
