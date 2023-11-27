@@ -47,15 +47,18 @@ stay where it is. The character cannot touch the monster. Otherwise the player' 
 In total we have five levels. Here are the previews for the levels.
 
 ### 3.1 Level 1
+Level 1 serves as an introduction to the monsters you'll encounter and the tools available for you to use in order to complete the level.
 <img src="Assets/Textures/Others/level1.png" alt="level1" height="300"/>
 
 ### 3.2 Level 2
+Level 2 resembles an obstacle course where careful navigation is crucial to avoid falling into hazardous terrains.
 <img src="Assets/Textures/Others/level2.png" alt="level2" height="310"/>
 
 ### 3.3 Level 3
 <!-- <img src="Assets/Textures/Others/level3.png" alt="level3" height="300"/> -->
 
 ### 3.4 Level 4
+Level 4 demands some exploration to deduce the strategy for completing the level promptly.
 <img src="Assets/Textures/Others/level4.png" alt="level4" height="350"/>
 
 ### 3.5 Level 5
