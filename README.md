@@ -42,7 +42,7 @@ stay where it is. The character cannot touch the monster. Otherwise the player' 
 - ![Exit](Assets/Textures/kenney_pixel-platformer/Tiles/tile_0150.png) : This is the exit. The character needs to get here to pass the level.
 - ![Water](Assets/Textures/kenney_pixel-platformer-industrial-expansion/Tiles/tile_0029.png ) : This is the water. The character needs to jump over it, otherwise you will drop through it.
 - ![HP](Assets/Textures/kenney_pixel-platformer/Tiles/tile_0044.png) : This is the HP replenishing prop. The character's HP will be increased by 1 if the character's HP is below the initial value.
-- ![Light](Assets/SD.png/eff_0.png) : This is the lighting. The character will die dirctly.
+- ![Light](Assets/Textures/kenney_pixel-platformer/Tiles/SD.png) : This is the lighting. The character will die dirctly.
 ## 3. Levels in Game
 In total we have five levels. Here are the previews for the levels.
 
