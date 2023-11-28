@@ -42,7 +42,7 @@ stay where it is. The character cannot touch the monster. Otherwise the player' 
 - ![Exit](Assets/Textures/kenney_pixel-platformer/Tiles/tile_0150.png) : This is the exit. The character needs to get here to pass the level.
 - ![Water](Assets/Textures/kenney_pixel-platformer-industrial-expansion/Tiles/tile_0029.png ) : This is the water. The character needs to jump over it, otherwise you will drop through it.
 - ![HP](Assets/Textures/kenney_pixel-platformer/Tiles/tile_0044.png) : This is the HP replenishing prop. The character's HP will be increased by 1 if the character's HP is below the initial value.
-
+- ![Light](Assets/SD.png) : This is the lighting. The character will die dirctly.
 ## 3. Levels in Game
 In total we have five levels. Here are the previews for the levels.
 
@@ -55,11 +55,13 @@ Level 2 resembles an obstacle course where careful navigation is crucial to avoi
 <img src="Assets/Textures/Others/level2.png" alt="level2" height="310"/>
 
 ### 3.3 Level 3
-<!-- <img src="Assets/Textures/Others/level3.png" alt="level3" height="300"/> -->
+Level 3 increases the difficulty of obstacle courses, and careful navigation is essential to avoid hitting flying obstacles in the map.
+<<img src="Assets/Textures/Others/level3.png" alt="level3" height="300"/> 
 
 ### 3.4 Level 4
 Level 4 demands some exploration to deduce the strategy for completing the level promptly.
 <img src="Assets/Textures/Others/level4.png" alt="level4" height="350"/>
 
 ### 3.5 Level 5
-<!-- <img src="Assets/Textures/Others/level5.png" alt="level5" height="300"/> -->
+Level 5 is a great test of where the character stays, and if you are not careful, you may be hit by electricity.
+<img src="Assets/Textures/Others/level5.png" alt="level5" height="300"/> 
