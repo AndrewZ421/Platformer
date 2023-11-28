@@ -26,11 +26,11 @@ A level-based game where players must navigate obstacles (jump over obstacles, a
 ### 2.1 Operation
 - Use the `A` key to move the character left.
 - Use the `D` key to move the character right.
-- Press `Q` to make the character get bigger or smaller. the bigger character jumps higher.
+- Press `Q` to make the character get bigger or smaller. The bigger character jumps higher.
 - Press the `spacebar` to make the character jump. Press the spacebar twice to double jump.
-- Click the `left mouse button` to fire when you have bullets.
+- Use `left click` to fire when you have bullets.
 - Press `Esc` to open the game menu.
-- Press `T` to switch to test mode which allows you have enough time and bullets. Press `T` again to switch back to normal mode.
+- Press `T` to switch to test mode which allows you have enough time, HP and bullets. Press `T` again to switch back to normal mode.
 
 ### 2.2 Objects in the game
 - ![Bat](Assets/Textures/kenney_pixel-platformer/Characters/character_0025.png): This is a flying monster. It will fly up and down. The character cannot touch the monster. Otherwise the player' HP will be decreased by 1.
@@ -42,26 +42,31 @@ stay where it is. The character cannot touch the monster. Otherwise the player' 
 - ![Exit](Assets/Textures/kenney_pixel-platformer/Tiles/tile_0150.png) : This is the exit. The character needs to get here to pass the level.
 - ![Water](Assets/Textures/kenney_pixel-platformer-industrial-expansion/Tiles/tile_0029.png ) : This is the water. The character needs to jump over it, otherwise you will drop through it.
 - ![HP](Assets/Textures/kenney_pixel-platformer/Tiles/tile_0044.png) : This is the HP replenishing prop. The character's HP will be increased by 1 if the character's HP is below the initial value.
-- ![Light](Assets/Textures/kenney_pixel-platformer/Tiles/SD.png) : This is the lighting. The character will die dirctly.
+- <img src="Assets/Textures/kenney_pixel-platformer/Tiles/Sd_1.png" alt="lightning" width="18"/> : This is the lightning. The character will die dirctly.
 ## 3. Levels in Game
 In total we have five levels. Here are the previews for the levels.
 
 ### 3.1 Level 1
 Level 1 serves as an introduction to the monsters you'll encounter and the tools available for you to use in order to complete the level.
-<img src="Assets/Textures/Others/level1.png" alt="level1" height="300"/>
+
+<img src="Assets/Textures/Others/level1.png" alt="level1" width="500"/>
 
 ### 3.2 Level 2
 Level 2 resembles an obstacle course where careful navigation is crucial to avoid falling into hazardous terrains.
-<img src="Assets/Textures/Others/level2.png" alt="level2" height="310"/>
+
+<img src="Assets/Textures/Others/level2.png" alt="level2" width="500"/>
 
 ### 3.3 Level 3
 Level 3 increases the difficulty of obstacle courses, and careful navigation is essential to avoid hitting flying obstacles in the map.
-<<img src="Assets/Textures/Others/level3.png" alt="level3" height="300"/> 
+
+<img src="Assets/Textures/Others/level3.png" alt="level3" width="500"/> 
 
 ### 3.4 Level 4
 Level 4 demands some exploration to deduce the strategy for completing the level promptly.
-<img src="Assets/Textures/Others/level4.png" alt="level4" height="350"/>
+
+<img src="Assets/Textures/Others/level4.png" alt="level4" width="500"/>
 
 ### 3.5 Level 5
 Level 5 is a great test of where the character stays, and if you are not careful, you may be hit by electricity.
-<img src="Assets/Textures/Others/level5.png" alt="level5" height="300"/> 
+
+<img src="Assets/Textures/Others/level5.png" alt="level5" width="500"/> 
