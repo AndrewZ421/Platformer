@@ -1,4 +1,4 @@
-# Platformer
+# Jumping Explorer (Platformer)
 Our webGL link (https://andrewz421.itch.io/platformer?secret=ZjMS9U9jRyuSOcGj7hYKosIZtO4).
 
 ## Group members:
